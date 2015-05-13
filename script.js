@@ -6,10 +6,10 @@ currentX = canvas.width/2;
 currentY = canvas.height/2;
 this.onkeydown = function(e) {
     old_keydown(e);
-    83 != e.keyCode || (currentX = 0); // S 
-    68 != e.keyCode || (currentY = canvas.height); // D 
-    69 != e.keyCode || (currentY = 0); // E 
-    70 != e.keyCode || (currentX = canvas.width); // F 
+    83 != e.keyCode || (currentX = -100000); // S
+    68 != e.keyCode || (currentY = 100000); // D
+    69 != e.keyCode || (currentY = -100000); // E
+    70 != e.keyCode || (currentX = 100000); // F
     old_mousemove({clientX: currentX, clientY: currentY});
 }
 this.onkeyup = function(e) {
